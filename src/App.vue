@@ -14,7 +14,7 @@ export default {
 <script>
 let loadedJSON;
 
-// new player constuctor that takes name, ID, total goals? Have myJSON run new player constructor for each person 
+// ** new player constuctor that takes name, ID, total goals? Have myJSON run new player constructor for each person 
 
 let playerList;
 fetch('https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster')
@@ -23,10 +23,11 @@ fetch('https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster')
   })
      .then(function(myJson){
     for (let i = 0; i < myJson.teams.length; i++){
-      myJson
       console.log(i);
     }
     });
+
+    // ** after this has run, then have this push the object to firebase ( would there be a way of having this automated rather than on page load?)
 
   // function getPlayerIDAndName(myJson) {
   //   for (let i = 0; i > myJson.teams.length;  i++){
